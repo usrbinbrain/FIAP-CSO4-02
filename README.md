@@ -24,3 +24,18 @@ A base de dados do [Abuseipdb.com](https://www.abuseipdb.com/) será usada para 
   
   - [x] [Conseguir apresentar](readme/slack_readme.md#centraliza%C3%A7%C3%A3o-de-informa%C3%A7%C3%A3o-no-slack), agrupar resultados em um canal de mensagens.
   
+#### Unindo o entregável.
+
+ - [x] [Script V1](readme/script_v1_readme.md#script-v1), realiza a **extração de IPv4 público** e a **consulta na API** do Abuseipdb.com.
+ 
+ - [x] [Script V2](readme/script_v2_readme.md#script-v2), permite gerar uma lista com todos os **IPv4 que possuem denúncias** e verifica apenas os logs gerados no **dia atual**.
+ 
+ - [x] [Script V3](readme/script_v3_readme.md#script-v3), adiciona a função de **centralizar as análises** do script, enviando os resultados para um **canal no slack**.
+
+#### Tornando o entregável gerenciável.
+
+ - [x] [Configuração automatizada](https://github.com/usrbinbrain/fiap-python-03/blob/main/README.md#configurar-um-servi%C3%A7o-no-systemd-usando-python) do [script v3](readme/script_v3_readme.md#script-v3) como um serviço (**unit**) no systemd.
+
+---
+
+###### ✏️ Autor: [Gabriel A. Gama](https://www.linkedin.com/in/gagama/).
