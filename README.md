@@ -22,7 +22,5 @@ A base de dados do [Abuseipdb.com](https://www.abuseipdb.com/) será usada para 
 
   - [x] [Conseguir investigar](readme/api_readme.md#controlando-a-api-do-abuseipdbcom), conectar e autenticar o código na API do abuseipdb.
   
-  - [x] [Conseguir apresentar](https://github.com/usrbinbrain/fiap-python-02/blob/main/readme/slack_readme.md#centraliza%C3%A7%C3%A3o-de-informa%C3%A7%C3%A3o-no-slack), agrupar resultados em um canal de mensagens.
-  
-  
+  - [x] [Conseguir apresentar](readme/slack_readme.md#centraliza%C3%A7%C3%A3o-de-informa%C3%A7%C3%A3o-no-slack), agrupar resultados em um canal de mensagens.
   
