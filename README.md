@@ -41,6 +41,7 @@ A base de dados do [Abuseipdb.com](https://www.abuseipdb.com/) será usada para 
 
 [Obtendo dados de arquivos PDF](https://github.com/usrbinbrain/fiap-pdf-regex-coletor/blob/main/README.md#fiap-pdf-regex-coletor)
 
+[Link do chatgpt REGEX](https://chat.openai.com/share/eb850c10-80fe-4381-a7dc-d4ddaf528e62)
 ---
 
 ###### ✏️ Autor: [Gabriel A. Gama](https://www.linkedin.com/in/gagama/).
