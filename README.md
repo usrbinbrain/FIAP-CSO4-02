@@ -36,12 +36,6 @@ A base de dados do [Abuseipdb.com](https://www.abuseipdb.com/) será usada para 
 
  - [x] [Configuração automatizada](https://github.com/usrbinbrain/fiap-python-03/blob/main/README.md#configurar-um-servi%C3%A7o-no-systemd-usando-python) do [script v3](readme/script_v3_readme.md#script-v3) como um serviço (**unit**) no systemd.
 
-
-#### Python regex.
-
-[Obtendo dados de arquivos PDF](https://github.com/usrbinbrain/fiap-pdf-regex-coletor/blob/main/README.md#fiap-pdf-regex-coletor)
-
-[Link do chatgpt REGEX](https://chat.openai.com/share/eb850c10-80fe-4381-a7dc-d4ddaf528e62)
 ---
 
 ###### ✏️ Autor: [Gabriel A. Gama](https://www.linkedin.com/in/gagama/).
