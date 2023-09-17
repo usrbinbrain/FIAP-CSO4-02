@@ -115,23 +115,23 @@ O corpo do alerta enviado para o Slack tem as seguintes informações.
 <details><summary>...</summary>
   
 ```python
+#!/usr/bin/env python3
 import subprocess
 import requests
-import json
 
 def discord_msg(lista_de_ip):
     # Variável recebe o webhook do Discord.
     DISCORD_WEBHOOK = "https://discord.com/api/webhooks/1153043817117798573/NazD8w2T7APQUCGkCXZtpfA4UMwTWspvZMI-v2uUPuMClv65AmlYc5M-n86Oz_g3up8A"
-    
+
     # Variável recebe o nome do projeto que emite o alerta.
     MSG_NOME_APP = "Python IPv4 hunter."
-    
+
     # Variável recebe um texto descrevendo o alerta.
     MSG_CONTEXTO = "IPv4 maliciosos identificados interagindo com ativo de rede."
-    
+
     # Variável recebe o hostname do servidor que está executando o script.
     SRV_HOSTNAME = subprocess.run(["hostname"], universal_newlines=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    
+
     # Variável recebe o título informando o hostname do servidor.
     MSG_TITULO = f"Servidor afetado: {SRV_HOSTNAME.stdout}"
 
@@ -139,21 +139,21 @@ def discord_msg(lista_de_ip):
     lista_formatada = []
     for endereco_ip in lista_de_ip:
         lista_formatada.append(f"[{endereco_ip}](https://www.abuseipdb.com/check/{endereco_ip})")
-    
+
     # Formata cada item da lista formatada com os links, colocando um por linha.
     lista_de_ip = "\n".join(lista_formatada)
 
     # Montando a mensagem que será enviada para o Discord.
     mensagem = f"**{MSG_CONTEXTO}**\n\n{MSG_TITULO}\n\n{lista_de_ip}\n"
-    
+
     # Dicionário usado para o corpo da requisição.
     campos_msg = {
         "content": mensagem,
         "username": MSG_NOME_APP
     }
-    
+
     # Realizando o request usando o webhook do Discord.
-    response = requests.post(DISCORD_WEBHOOK, data=json.dumps(campos_msg), headers={"Content-Type": "application/json"})
+    response = requests.post(DISCORD_WEBHOOK, data=str(campos_msg).replace("'", '"'), headers={"Content-Type": "application/json"})
 
     # Exibindo o texto da resposta da requisição.
     print(response.text)
@@ -163,6 +163,14 @@ l = ["8.8.8.8"]
 # Chamando a função e passando a lista de teste (l) como argumento.
 discord_msg(l)
 ```
+
+O corpo do alerta enviado para o Discord tem as seguintes informações.
+
+ - [x] Nome do projeto que gera os alertas.
+ - [x] Descrição do tipo de alerta.
+ - [x] Hostname do servidor afetado.
+ - [x] Lista de endereços IPv4 públicos analisados e identificados como maliciosos (cada IP tem um link para sua página no abuseipdb).
+
 
 <p align="center">
   <img alt="Alerta Discord" src="https://i.imgur.com/JkPyKfX.png" title="Alerta Discord" width="65%">
